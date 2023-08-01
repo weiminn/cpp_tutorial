@@ -1,6 +1,6 @@
 # Ubuntu 
 
-# Run  cd /home/weiminn/Documents/cpp_tutorial/project && rm -rf build/ && mkdir build && cd build && cmake .. && make && ./bin/main
+# Run cd /home/weiminn/Documents/cpp_tutorial/project && rm -rf build/ && mkdir build && cd build && cmake .. && make && cd ../.. && ./project/build/bin/main
 
 set(CMAKE_CXX_COMPILER "/usr/lib/ccache/g++")
 set(CMAKE_C_COMPILER "/usr/lib/ccache/gcc")
