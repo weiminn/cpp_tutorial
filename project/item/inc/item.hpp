@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <vector>
-#include "../../person/inc/person.hpp"
+#include "person.hpp"
 
 using namespace std;
 

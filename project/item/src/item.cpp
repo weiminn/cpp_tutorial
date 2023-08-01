@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "../../person/inc/person.hpp"
-#include "../inc/item.hpp"
+#include "person.hpp"
+#include "item.hpp"
 
 using namespace std;
 
