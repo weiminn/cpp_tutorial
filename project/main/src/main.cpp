@@ -1,19 +1,26 @@
 #include <iostream>
+#include <vector>
+#include "../../person/inc/person.hpp"
+#include "../../item/inc/item.hpp"
 
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
+    Person person1 = Person("April", 1997);
+    Person person2 = Person("May", 1995);
+    vector<Person> personsItem1 = {person1, person2};
 
-    // compile the header and implementation files first before running this!!!
-    // g++ -g 07_main.cpp 07_food.cpp 07_food.h -o 07_main
-    // ./07_main
+    Item item1 = Item("Seasons in the Sun", personsItem1);
+    Person person3 = Person("June", 1993);
+    item1.addPerson(person3);
 
-    double x;
-
-    cout << "Today, I'll eat Pizza!" << endl;
-
-    cin >> x;
+    vector<Person> newPersonsItem1 = item1.getPersons();
+    cout << "Persons: ";
+    for (int i = 0; i < newPersonsItem1.size(); i++){
+        cout << ", " << newPersonsItem1[i].getName();
+    } 
+    cout << "." << endl;
 
     return 0;
 }
