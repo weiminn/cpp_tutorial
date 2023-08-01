@@ -16,4 +16,4 @@ target_include_directories(
     )
 
 # import other library binaries from other project
-# target_link_libraries(item person)
+target_link_libraries(item person)
