@@ -10,14 +10,14 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../main/../person/inc"
-  "../main/../item/inc"
+  "../item/inc"
+  "../person/inc"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/weiminn/Documents/cpp_tutorial/project/build/person/CMakeFiles/person.dir/DependInfo.cmake"
   "/home/weiminn/Documents/cpp_tutorial/project/build/item/CMakeFiles/item.dir/DependInfo.cmake"
+  "/home/weiminn/Documents/cpp_tutorial/project/build/person/CMakeFiles/person.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

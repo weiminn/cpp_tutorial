@@ -79,9 +79,8 @@ main_EXTERNAL_OBJECTS =
 
 bin/main: main/CMakeFiles/main.dir/src/main.cpp.o
 bin/main: main/CMakeFiles/main.dir/build.make
-bin/main: person/libperson.a
-bin/main: item/libitem.a
-bin/main: person/libperson.a
+bin/main: item/libitem.so
+bin/main: person/libperson.so
 bin/main: main/CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/weiminn/Documents/cpp_tutorial/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/main"
 	cd /home/weiminn/Documents/cpp_tutorial/project/build/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)

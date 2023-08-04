@@ -29,6 +29,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Recurse into the subdirectories. This does not actually
 # cause another cmake executable to run. The same process will walk through
 # the project's entire directory structure.
+
+message("Preparing person")
 add_subdirectory (person)
+message("Preparing item")
 add_subdirectory (item)
+message("Preparing main")
 add_subdirectory (main)

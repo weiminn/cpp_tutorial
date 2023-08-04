@@ -22,5 +22,24 @@ int main(int argc, char const *argv[])
     } 
     cout << "." << endl;
 
+    // Doesn't compile: cannot print instance directly
+    // cout << "person1 instance: " << person1 << endl;
+    // cout << "person2 instance: " << person2 << endl;
+
+    cout << "Reference to person1: " << &person1 << endl;
+    cout << "Reference to person2: " << &person2 << endl;
+
+    Person* person1Ptr = &person1; // recommended syntax
+    Person * person2Ptr = &person2; // valid
+    Person *person3Ptr = &person3; // valid
+
+    // Doesn't compile: cannot store object inside pointer or reference inside object
+    // Person* person1Ptr = person1;
+    // Person person2Ptr = &person2;
+
+    cout << "Pointer to person1: " << person1Ptr << endl;
+    cout << "Pointer to person2: " << person2Ptr << endl;
+    cout << "Pointer to person3: " << person3Ptr << endl;
+
     return 0;
 }
