@@ -4,12 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/weiminn/Documents/cpp_tutorial/project/dict/src/dict.cpp" "/home/weiminn/Documents/cpp_tutorial/project/build/main/CMakeFiles/main.dir/__/dict/src/dict.cpp.o"
   "/home/weiminn/Documents/cpp_tutorial/project/main/src/main.cpp" "/home/weiminn/Documents/cpp_tutorial/project/build/main/CMakeFiles/main.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../main/../dict/inc"
   "../item/inc"
   "../person/inc"
   )

@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/weiminn/Documents/cpp_tutorial/project/item/inc -I/home/weiminn/Documents/cpp_tutorial/project/person/inc 
+CXX_INCLUDES = -I/home/weiminn/Documents/cpp_tutorial/project/main/../dict/inc -I/home/weiminn/Documents/cpp_tutorial/project/item/inc -I/home/weiminn/Documents/cpp_tutorial/project/person/inc 
 

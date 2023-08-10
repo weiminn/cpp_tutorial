@@ -134,7 +134,7 @@ person/clean: person/CMakeFiles/person.dir/clean
 person/CMakeFiles/person.dir/all:
 	$(MAKE) -f person/CMakeFiles/person.dir/build.make person/CMakeFiles/person.dir/depend
 	$(MAKE) -f person/CMakeFiles/person.dir/build.make person/CMakeFiles/person.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weiminn/Documents/cpp_tutorial/project/build/CMakeFiles --progress-num=5,6 "Built target person"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weiminn/Documents/cpp_tutorial/project/build/CMakeFiles --progress-num=6,7 "Built target person"
 .PHONY : person/CMakeFiles/person.dir/all
 
 # Build rule for subdir invocation for target.
@@ -185,16 +185,16 @@ item/CMakeFiles/item.dir/clean:
 # Target rules for target main/CMakeFiles/main.dir
 
 # All Build rule for target.
-main/CMakeFiles/main.dir/all: person/CMakeFiles/person.dir/all
 main/CMakeFiles/main.dir/all: item/CMakeFiles/item.dir/all
+main/CMakeFiles/main.dir/all: person/CMakeFiles/person.dir/all
 	$(MAKE) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/depend
 	$(MAKE) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weiminn/Documents/cpp_tutorial/project/build/CMakeFiles --progress-num=3,4 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weiminn/Documents/cpp_tutorial/project/build/CMakeFiles --progress-num=3,4,5 "Built target main"
 .PHONY : main/CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 main/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/weiminn/Documents/cpp_tutorial/project/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weiminn/Documents/cpp_tutorial/project/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 main/CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/weiminn/Documents/cpp_tutorial/project/build/CMakeFiles 0
 .PHONY : main/CMakeFiles/main.dir/rule

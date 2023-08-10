@@ -125,6 +125,33 @@ main/fast:
 	cd /home/weiminn/Documents/cpp_tutorial/project/build && $(MAKE) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+__/dict/src/dict.o: __/dict/src/dict.cpp.o
+
+.PHONY : __/dict/src/dict.o
+
+# target to build an object file
+__/dict/src/dict.cpp.o:
+	cd /home/weiminn/Documents/cpp_tutorial/project/build && $(MAKE) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/__/dict/src/dict.cpp.o
+.PHONY : __/dict/src/dict.cpp.o
+
+__/dict/src/dict.i: __/dict/src/dict.cpp.i
+
+.PHONY : __/dict/src/dict.i
+
+# target to preprocess a source file
+__/dict/src/dict.cpp.i:
+	cd /home/weiminn/Documents/cpp_tutorial/project/build && $(MAKE) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/__/dict/src/dict.cpp.i
+.PHONY : __/dict/src/dict.cpp.i
+
+__/dict/src/dict.s: __/dict/src/dict.cpp.s
+
+.PHONY : __/dict/src/dict.s
+
+# target to generate assembly for a file
+__/dict/src/dict.cpp.s:
+	cd /home/weiminn/Documents/cpp_tutorial/project/build && $(MAKE) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/__/dict/src/dict.cpp.s
+.PHONY : __/dict/src/dict.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -161,6 +188,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... __/dict/src/dict.o"
+	@echo "... __/dict/src/dict.i"
+	@echo "... __/dict/src/dict.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

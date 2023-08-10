@@ -1,8 +1,22 @@
 cmake_minimum_required (VERSION 3.10)
 project (main)
 
-add_executable(main src/main.cpp)
+add_executable(main 
+    src/main.cpp
 
+    # looks like library but it is still part of the source code, as dict code has no CMakeLists of itself!
+    # cannot use wildcards
+    # no need to compile hpp file, they are registered instead by target_include_directories below
+    ${CMAKE_CURRENT_SOURCE_DIR}/../dict/src/dict.cpp 
+)
+
+target_include_directories(
+    main
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/../dict/inc
+)
+
+# headers are already inherited from item (and person transitively) by target_link_libraries below
 # set(MAIN_DEP_HEADERS_DIR
 #     ${CMAKE_CURRENT_SOURCE_DIR}/../person/inc
 #     ${CMAKE_CURRENT_SOURCE_DIR}/../item/inc
