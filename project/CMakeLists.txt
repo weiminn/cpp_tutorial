@@ -2,9 +2,17 @@
 
 # Run cd /home/weiminn/Documents/cpp_tutorial/project && rm -rf build/ && mkdir build && cd build && cmake .. && make && cd ../.. && ./project/build/bin/main
 
-set(CMAKE_CXX_COMPILER "/usr/lib/ccache/g++")
-set(CMAKE_C_COMPILER "/usr/lib/ccache/gcc")
-set(PROJECT_DIR "/home/weiminn/Documents/cpp_tutorial/project")
+# set(CMAKE_CXX_COMPILER "/usr/lib/ccache/g++")
+# set(CMAKE_C_COMPILER "/usr/lib/ccache/gcc")
+# set(PROJECT_DIR "/home/weiminn/Documents/cpp_tutorial/project")
+
+# Mac
+
+# Run cd /Users/weiminn/Documents/cpp_tutorial/project && rm -rf build/ && mkdir build && cd build && cmake .. && make && cd ../.. && ./project/build/bin/main
+
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+set(CMAKE_C_COMPILER "/usr/bin/gcc")
+set(PROJECT_DIR "/Users/weiminn/Documents/cpp_tutorial/project")
 
 # Windows
 
