@@ -1,3 +1,4 @@
+#include <iostream>
 #include "arraylist.hpp"
 
 int main(){
@@ -39,6 +40,8 @@ int main(){
 
     ArrayList<int> backline = array.subList(1, 5);
     backline.printString();
+
+    cout << "============================" << endl;
 
     return 0;
 }

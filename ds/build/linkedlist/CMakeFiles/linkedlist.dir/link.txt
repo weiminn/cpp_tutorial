@@ -1,0 +1,1 @@
+/usr/bin/g++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -dynamiclib -Wl,-headerpad_max_install_names -o liblinkedlist.dylib -install_name @rpath/liblinkedlist.dylib CMakeFiles/linkedlist.dir/src/linkedlist.cpp.o  -Wl,-rpath,/Users/weiminn/Documents/cpp_tutorial/ds/build/arraylist ../arraylist/libarraylist.dylib 

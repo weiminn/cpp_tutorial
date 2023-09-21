@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 template <typename T> 
 ArrayList<T>::ArrayList(vector<T> vector) {
     ArrayList::data = vector;
@@ -67,10 +66,9 @@ void ArrayList<T>::printString(){
         }
     }
     cout << endl;
-
 }
 
-// explicti instantiation for all the types this class will be used with
+// explictly instantiation for all the types this class will be used with
 template class ArrayList<int>;
 template class ArrayList<double>;
 template class ArrayList<string>;

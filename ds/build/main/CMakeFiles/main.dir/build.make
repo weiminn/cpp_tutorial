@@ -92,6 +92,7 @@ main_EXTERNAL_OBJECTS =
 
 bin/main: main/CMakeFiles/main.dir/src/main.cpp.o
 bin/main: main/CMakeFiles/main.dir/build.make
+bin/main: linkedlist/liblinkedlist.dylib
 bin/main: arraylist/libarraylist.dylib
 bin/main: main/CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/main"

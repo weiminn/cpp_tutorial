@@ -1,5 +1,5 @@
-main/CMakeFiles/main.dir/src/main.cpp.o: \
-  /Users/weiminn/Documents/cpp_tutorial/ds/main/src/main.cpp \
+linkedlist/CMakeFiles/linkedlist.dir/src/linkedlist.cpp.o: \
+  /Users/weiminn/Documents/cpp_tutorial/ds/linkedlist/src/linkedlist.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
@@ -731,4 +731,6 @@ main/CMakeFiles/main.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Users/weiminn/Documents/cpp_tutorial/ds/arraylist/inc/arraylist.hpp
+  /Users/weiminn/Documents/cpp_tutorial/ds/linkedlist/inc/linkedlist.hpp \
+  /Users/weiminn/Documents/cpp_tutorial/ds/arraylist/inc/arraylist.hpp \
+  /Users/weiminn/Documents/cpp_tutorial/ds/linkedlist/inc/linkednode.hpp

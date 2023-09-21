@@ -3,6 +3,9 @@
 /Users/weiminn/Documents/cpp_tutorial/ds/build/arraylist/CMakeFiles/arraylist.dir
 /Users/weiminn/Documents/cpp_tutorial/ds/build/arraylist/CMakeFiles/edit_cache.dir
 /Users/weiminn/Documents/cpp_tutorial/ds/build/arraylist/CMakeFiles/rebuild_cache.dir
+/Users/weiminn/Documents/cpp_tutorial/ds/build/linkedlist/CMakeFiles/linkedlist.dir
+/Users/weiminn/Documents/cpp_tutorial/ds/build/linkedlist/CMakeFiles/edit_cache.dir
+/Users/weiminn/Documents/cpp_tutorial/ds/build/linkedlist/CMakeFiles/rebuild_cache.dir
 /Users/weiminn/Documents/cpp_tutorial/ds/build/main/CMakeFiles/main.dir
 /Users/weiminn/Documents/cpp_tutorial/ds/build/main/CMakeFiles/edit_cache.dir
 /Users/weiminn/Documents/cpp_tutorial/ds/build/main/CMakeFiles/rebuild_cache.dir
