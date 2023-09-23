@@ -47,6 +47,7 @@ int main(){
     LinkedList<int> ll(backline);
     ll.printString();
     cout << "Size: " << ll.getSize() << endl;
+    cout << "3rd Value: " << ll.get(2)->value << endl;
 
     // cout << ll->head->value << endl;
 

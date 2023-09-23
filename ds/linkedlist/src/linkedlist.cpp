@@ -72,11 +72,6 @@ int LinkedList<T>::getSize(){
 }
 
 // template <typename T> 
-// void ArrayList<T>::add(T x){
-//     ArrayList::data.push_back(x);
-// }
-
-// template <typename T> 
 // void ArrayList<T>::remove(int i){
 //     ArrayList::data.erase(ArrayList::data.begin()+i);
 // }
@@ -95,10 +90,18 @@ int LinkedList<T>::getSize(){
 //     }
 // }
 
-// template <typename T> 
-// T ArrayList<T>::get(int i){
-//     return ArrayList::data[i];
-// }
+template <typename T> 
+LinkedNode<T>* LinkedList<T>::get(int n){
+
+    int i = 0;
+    LinkedNode<T> *currNode = head;
+    while(i < n){
+        currNode = currNode->next;
+        i++;
+    }
+
+    return currNode;
+}
 
 // template <typename T> 
 // T ArrayList<T>::set(int i, T x){

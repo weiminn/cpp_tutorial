@@ -26,7 +26,7 @@ class LinkedList {
         // void remove(int i);
         // // void removeAll();
         // // bool isEmpty();
-        // T get(int i);
+        LinkedNode<T>* get(int i);
         // T set(int i, T x);
         // // ArrayList<T> subList(int i1, int i2);
         // // int indexOf(T)
