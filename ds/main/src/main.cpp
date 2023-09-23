@@ -1,5 +1,6 @@
 #include <iostream>
 #include "arraylist.hpp"
+#include "linkedlist.hpp"
 
 int main(){
 
@@ -42,6 +43,12 @@ int main(){
     backline.printString();
 
     cout << "============================" << endl;
+
+    LinkedList<int> ll(backline);
+    ll.printString();
+    cout << "Size: " << ll.getSize() << endl;
+
+    // cout << ll->head->value << endl;
 
     return 0;
 }

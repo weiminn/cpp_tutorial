@@ -13,22 +13,15 @@ class LinkedList {
         // need to use pointers cos LinkedNode's next and prev are also using pointers, so need to keep it consistent!
         LinkedNode<T> *head;
         LinkedNode<T> *tail;
-        int size;
+        int size; 
 
     public:
-        LinkedList<T>(ArrayList<T> arr);
         
-        LinkedNode<T> getHead();
-        void setHead(LinkedNode<T> node);
-        void setHead(T node);
+        LinkedList<T>();
+        LinkedList<T>(ArrayList<T> arr);
 
-        LinkedNode<T> getTail();
-        void setTail(LinkedNode<T> node);
-        void setTail(T node);
-
-        // // ArrayList(vector<T> input);
-        // int getSize();
-        // // void add(T x);
+        int getSize();
+        void add(T x);
         // void add(int i, x);
         // void remove(int i);
         // // void removeAll();
@@ -39,6 +32,6 @@ class LinkedList {
         // // int indexOf(T)
         // // void sort(Comparator)
         // // iterator
-        // void printString();
+        void printString();
 
 };

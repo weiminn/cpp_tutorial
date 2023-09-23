@@ -6,52 +6,70 @@
 using namespace std;
 
 template <typename T> 
-LinkedNode<T>::LinkedNode(T value) {
-    LinkedNode::value = value;
-    LinkedNode::next = nullptr;
-    LinkedNode::prev = nullptr;
+LinkedNode<T>::LinkedNode(T _value) {
+    value = _value;
+    next = NULL;
+    prev = NULL;
+}
+
+template <typename T> 
+LinkedList<T>::LinkedList() {
+    head = NULL;
+    tail = NULL;
+    size = 0;
 }
 
 template <typename T> 
 LinkedList<T>::LinkedList(ArrayList<T> arr) {
+    LinkedList();
+
     if (!arr.isEmpty()){
-        LinkedList::head = nullptr;
-        LinkedList::tail = nullptr;
-    }
-
-    LinkedNode<T> headNode = LinkedNode<T>(arr.get(0));
-    LinkedList::head = &headNode;
-    LinkedNode<T> tailNode = LinkedNode<T>(arr.get(arr.getSize()-1));
-    LinkedList::tail = &tailNode;
-
-    // set next's
-    int i = 0;
-    LinkedNode<T> *currNode = &(*LinkedList::head);
-    while(i < arr.getSize()-1){
-        if (i < arr.getSize()-2){
-            // create new node and set it as next
-            LinkedNode<T> newNode = LinkedNode<T>(arr.get(i+1));
-            currNode->next = &newNode;
+        for (int i = 0; i < arr.getSize(); i++){
+            add(arr.get(i));
         }
-        else if (i == arr.getSize()-2){ 
-            // if you're at second last, then set next it to tail
-            currNode->next = &(*LinkedList::tail);
-        }
-        i++;
     }
 
-    // set prev's
-    LinkedNode<T> *iNode = &(*(LinkedList::head));
-    while(iNode->next != nullptr){
-        LinkedNode<T> *jNode = &(*(iNode->next));
-        jNode->prev = &(*(iNode));
-    }
 }
 
-// template <typename T> 
-// int ArrayList<T>::getSize(){
-//     return ArrayList::data.size();
-// }
+template <typename T>
+void LinkedList<T>::add(T x){
+    
+    // Create the new Node.
+    LinkedNode<T>* newNode = new LinkedNode<T>(x);
+    size++;
+  
+    // Assign to head if size is 0 (empty)
+    if (head == NULL) {
+        head = newNode;
+        return;
+    } 
+    // Assign to tail if size is 1 (no tail)
+    else if (tail == NULL){
+        tail = newNode;
+        head->next = newNode;
+        tail->prev = head;
+        return;
+    }
+  
+    // Naive, O(n^2): Traverse till end of list
+    // LinkedNode<T>* temp = head;
+    // while (temp->next != NULL) {
+    //     // Update temp
+    //     temp = temp->next;
+    // }
+    // // Insert at the last.
+    // temp->next = newNode;
+
+    // Efficient, O(n): Insert from tail
+    tail->next = newNode;
+    newNode->prev = tail;
+    tail = newNode;
+}
+
+template <typename T> 
+int LinkedList<T>::getSize(){
+    return size;
+}
 
 // template <typename T> 
 // void ArrayList<T>::add(T x){
@@ -95,17 +113,26 @@ LinkedList<T>::LinkedList(ArrayList<T> arr) {
 //     return ArrayList(slice_of_data);
 // }
 
-// template <typename T> 
-// void ArrayList<T>::printString(){
-//     cout << "Current array: ";
-//     for (int i = 0; i < ArrayList::data.size(); i++) {
-//         cout << ArrayList::data[i];
-//         if (i < ArrayList::data.size() - 1) {
-//             cout << ", ";
-//         }
-//     }
-//     cout << endl;
-// }
+template <typename T> 
+void LinkedList<T>::printString(){
+
+    cout << "Forward Traversal: ";
+    LinkedNode<T> *currNode = head;
+    while(currNode != NULL){
+        cout << currNode->value << " ";
+        currNode = currNode->next;
+    }
+    cout << endl;
+
+    cout << "Backward Traversal: ";
+    currNode = tail;
+    while(currNode != NULL){
+        cout << currNode->value << " ";
+        currNode = currNode->prev;
+    }
+    cout << endl;
+
+}
 
 // explictly instantiation for all the types this class will be used with
 // template class LinkedNode<int>;
