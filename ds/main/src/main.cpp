@@ -48,6 +48,14 @@ int main(){
     ll.printString();
     cout << "Size: " << ll.getSize() << endl;
     cout << "3rd Value: " << ll.get(2)->value << endl;
+    cout << "Empty? " << ll.isEmpty() << endl;
+    cout << "Removing all" << endl;
+    ll.removeAll();
+    cout << "Empty? " << ll.isEmpty() << endl;
+    ll.printString();
+
+    cout << ll.head << endl;
+
 
     // cout << ll->head->value << endl;
 

@@ -11,11 +11,11 @@ template <typename T>
 class LinkedList {
     private:
         // need to use pointers cos LinkedNode's next and prev are also using pointers, so need to keep it consistent!
-        LinkedNode<T> *head;
-        LinkedNode<T> *tail;
         int size; 
 
     public:
+        LinkedNode<T> *head;
+        LinkedNode<T> *tail;
         
         LinkedList<T>();
         LinkedList<T>(ArrayList<T> arr);
@@ -24,8 +24,9 @@ class LinkedList {
         void add(T x);
         // void add(int i, x);
         // void remove(int i);
-        // // void removeAll();
-        // // bool isEmpty();
+        void removeRecurse(LinkedNode<T> *currNode);
+        void removeAll();
+        bool isEmpty();
         LinkedNode<T>* get(int i);
         // T set(int i, T x);
         // // ArrayList<T> subList(int i1, int i2);

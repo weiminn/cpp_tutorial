@@ -17,6 +17,8 @@ LinkedList<T>::LinkedList() {
     head = NULL;
     tail = NULL;
     size = 0;
+
+    // cout << head << endl;
 }
 
 template <typename T> 
@@ -76,19 +78,26 @@ int LinkedList<T>::getSize(){
 //     ArrayList::data.erase(ArrayList::data.begin()+i);
 // }
 
-// template <typename T> 
-// void ArrayList<T>::removeAll(){
-//     ArrayList::data.clear();
-// }
 
-// template <typename T> 
-// bool ArrayList<T>::isEmpty(){
-//     if (ArrayList::data.size() == 0) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+template <typename T> 
+void LinkedList<T>::removeRecurse(LinkedNode<T> *currNode){
+    if (currNode->next != NULL){
+        removeRecurse(currNode->next);
+    }
+    delete currNode;
+}
+
+template <typename T> 
+void LinkedList<T>::removeAll(){
+    removeRecurse(head);
+    head = NULL;
+    tail = NULL;
+}
+
+template <typename T> 
+bool LinkedList<T>::isEmpty(){
+    return head == NULL && tail == NULL; 
+}
 
 template <typename T> 
 LinkedNode<T>* LinkedList<T>::get(int n){
