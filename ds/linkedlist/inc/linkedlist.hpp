@@ -22,8 +22,8 @@ class LinkedList {
 
         int getSize();
         void add(T x);
-        // void add(int i, x);
-        // void remove(int i);
+        void add(T x, int n);
+        void remove(int n);
         void removeRecurse(LinkedNode<T> *currNode);
         void removeAll();
         bool isEmpty();

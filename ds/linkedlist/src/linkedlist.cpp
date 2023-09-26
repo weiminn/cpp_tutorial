@@ -69,6 +69,25 @@ void LinkedList<T>::add(T x){
 }
 
 template <typename T> 
+void LinkedList<T>::add(T x, int n){
+    if (size < 1){
+        add(x);
+        return;
+    }
+
+    // Create the new Node.
+    LinkedNode<T>* newNode = new LinkedNode<T>(x);
+    size++;
+
+    // get nth node
+    LinkedNode<T>* nthNode = get(n);
+    nthNode->prev->next = newNode;
+    newNode->prev = nthNode->prev;
+    nthNode->prev = newNode;
+    newNode->next = nthNode;
+}
+
+template <typename T> 
 int LinkedList<T>::getSize(){
     return size;
 }
@@ -78,6 +97,17 @@ int LinkedList<T>::getSize(){
 //     ArrayList::data.erase(ArrayList::data.begin()+i);
 // }
 
+
+template <typename T> 
+void LinkedList<T>::remove(int n){
+
+    // get nth node
+    LinkedNode<T>* nthNode = get(n);
+    nthNode->prev->next = nthNode->next;
+    nthNode->next->prev = nthNode->prev;
+    size--;
+    delete nthNode;
+}
 
 template <typename T> 
 void LinkedList<T>::removeRecurse(LinkedNode<T> *currNode){
@@ -90,13 +120,14 @@ void LinkedList<T>::removeRecurse(LinkedNode<T> *currNode){
 template <typename T> 
 void LinkedList<T>::removeAll(){
     removeRecurse(head);
+    size = 0;
     head = NULL;
     tail = NULL;
 }
 
 template <typename T> 
 bool LinkedList<T>::isEmpty(){
-    return head == NULL && tail == NULL; 
+    return head == NULL && tail == NULL && size == 0; 
 }
 
 template <typename T> 
