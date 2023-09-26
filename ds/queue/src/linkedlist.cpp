@@ -92,24 +92,17 @@ int LinkedList<T>::getSize(){
     return size;
 }
 
+// template <typename T> 
+// void ArrayList<T>::remove(int i){
+//     ArrayList::data.erase(ArrayList::data.begin()+i);
+// }
+
+
 template <typename T> 
 void LinkedList<T>::remove(int n){
 
     // get nth node
     LinkedNode<T>* nthNode = get(n);
-
-    if (nthNode == head){
-        nthNode->next->prev = nthNode->prev;
-        head = nthNode->next;
-        delete nthNode;
-        return;
-    }else if (nthNode == tail){
-        nthNode->prev->next = nthNode->next;
-        tail = nthNode->prev;
-        delete nthNode;
-        return;
-    }
-
     nthNode->prev->next = nthNode->next;
     nthNode->next->prev = nthNode->prev;
     size--;

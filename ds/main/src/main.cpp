@@ -58,6 +58,9 @@ int main(){
     ll.remove(3);
     ll.remove(1);
     ll.add(33, 1);
+    ll.remove(0);
+    ll.remove(2);
+    ll.add(8, 1);
     ll.printString();
 
     cout << "Removing all" << endl;
