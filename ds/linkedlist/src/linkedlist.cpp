@@ -81,10 +81,17 @@ void LinkedList<T>::add(T x, int n){
 
     // get nth node
     LinkedNode<T>* nthNode = get(n);
-    nthNode->prev->next = newNode;
-    newNode->prev = nthNode->prev;
-    nthNode->prev = newNode;
-    newNode->next = nthNode;
+
+    if (nthNode == head){
+        head->prev = newNode;
+        newNode->next = head;
+        head = newNode;
+    } else {
+        nthNode->prev->next = newNode;
+        newNode->prev = nthNode->prev;
+        nthNode->prev = newNode;
+        newNode->next = nthNode;        
+    }
 }
 
 template <typename T> 
@@ -99,21 +106,41 @@ void LinkedList<T>::remove(int n){
     LinkedNode<T>* nthNode = get(n);
 
     if (nthNode == head){
-        nthNode->next->prev = nthNode->prev;
-        head = nthNode->next;
+        
+        // nthNode might be head == tail after dequeuing
+        if (head != tail){
+            nthNode->next->prev = NULL;
+            head = nthNode->next;
+        } else {
+            head = NULL;
+            tail = NULL;
+            size = 0;
+        }
+        
         delete nthNode;
-        return;
-    }else if (nthNode == tail){
-        nthNode->prev->next = nthNode->next;
+    } else if (nthNode == tail){
+        
+        // nthNode might be head == tail after dequeuing
+        if (head != tail){
+            nthNode->prev->next = NULL;
+        }
+
+        // if (head == tail && head == nthNode){
+        //     head = NULL;
+        //     tail = NULL;
+        //     size = 0;
+        // }
+        
         tail = nthNode->prev;
         delete nthNode;
-        return;
+    } else {
+        nthNode->prev->next = nthNode->next;
+        nthNode->next->prev = nthNode->prev;
+        size--;
+        delete nthNode;
     }
-
-    nthNode->prev->next = nthNode->next;
-    nthNode->next->prev = nthNode->prev;
     size--;
-    delete nthNode;
+
 }
 
 template <typename T> 
@@ -150,19 +177,6 @@ LinkedNode<T>* LinkedList<T>::get(int n){
     return currNode;
 }
 
-// template <typename T> 
-// T ArrayList<T>::set(int i, T x){
-//     T y = ArrayList::data[i];
-//     ArrayList::data[i] = x;
-//     return y;
-// }
-
-// template <typename T> 
-// ArrayList<T> ArrayList<T>::subList(int i1, int i2){
-//     vector<T> slice_of_data(ArrayList::data.begin()+i1, ArrayList::data.begin()+i2);
-//     return ArrayList(slice_of_data);
-// }
-
 template <typename T> 
 void LinkedList<T>::printString(){
 
@@ -185,9 +199,6 @@ void LinkedList<T>::printString(){
 }
 
 // explictly instantiation for all the types this class will be used with
-// template class LinkedNode<int>;
-// template class LinkedNode<double>;
-// template class LinkedNode<string>;
 template class LinkedList<int>;
 template class LinkedList<double>;
 template class LinkedList<string>;

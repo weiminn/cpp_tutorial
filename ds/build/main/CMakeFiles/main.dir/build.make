@@ -92,6 +92,7 @@ main_EXTERNAL_OBJECTS =
 
 bin/main: main/CMakeFiles/main.dir/src/main.cpp.o
 bin/main: main/CMakeFiles/main.dir/build.make
+bin/main: queue/libqueue.dylib
 bin/main: linkedlist/liblinkedlist.dylib
 bin/main: arraylist/libarraylist.dylib
 bin/main: main/CMakeFiles/main.dir/link.txt

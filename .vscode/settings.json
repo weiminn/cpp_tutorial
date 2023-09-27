@@ -77,7 +77,8 @@
         "__nullptr": "cpp",
         "__string": "cpp",
         "compare": "cpp",
-        "concepts": "cpp"
+        "concepts": "cpp",
+        "__memory": "cpp"
     },
     "cmake.sourceDirectory": "/home/weiminn/Documents/cpp_tutorial/project"
 }

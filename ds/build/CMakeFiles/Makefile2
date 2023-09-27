@@ -65,18 +65,21 @@ CMAKE_BINARY_DIR = /Users/weiminn/Documents/cpp_tutorial/ds/build
 # The main recursive "all" target.
 all: arraylist/all
 all: linkedlist/all
+all: queue/all
 all: main/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: arraylist/preinstall
 preinstall: linkedlist/preinstall
+preinstall: queue/preinstall
 preinstall: main/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: arraylist/clean
 clean: linkedlist/clean
+clean: queue/clean
 clean: main/clean
 .PHONY : clean
 
@@ -124,6 +127,21 @@ main/preinstall:
 # Recursive "clean" directory target.
 main/clean: main/CMakeFiles/main.dir/clean
 .PHONY : main/clean
+
+#=============================================================================
+# Directory level rules for directory queue
+
+# Recursive "all" directory target.
+queue/all: queue/CMakeFiles/queue.dir/all
+.PHONY : queue/all
+
+# Recursive "preinstall" directory target.
+queue/preinstall:
+.PHONY : queue/preinstall
+
+# Recursive "clean" directory target.
+queue/clean: queue/CMakeFiles/queue.dir/clean
+.PHONY : queue/clean
 
 #=============================================================================
 # Target rules for target arraylist/CMakeFiles/arraylist.dir
@@ -178,11 +196,39 @@ linkedlist/CMakeFiles/linkedlist.dir/clean:
 .PHONY : linkedlist/CMakeFiles/linkedlist.dir/clean
 
 #=============================================================================
+# Target rules for target queue/CMakeFiles/queue.dir
+
+# All Build rule for target.
+queue/CMakeFiles/queue.dir/all: linkedlist/CMakeFiles/linkedlist.dir/all
+queue/CMakeFiles/queue.dir/all: arraylist/CMakeFiles/arraylist.dir/all
+	$(MAKE) $(MAKESILENT) -f queue/CMakeFiles/queue.dir/build.make queue/CMakeFiles/queue.dir/depend
+	$(MAKE) $(MAKESILENT) -f queue/CMakeFiles/queue.dir/build.make queue/CMakeFiles/queue.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles --progress-num=7,8 "Built target queue"
+.PHONY : queue/CMakeFiles/queue.dir/all
+
+# Build rule for subdir invocation for target.
+queue/CMakeFiles/queue.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 queue/CMakeFiles/queue.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles 0
+.PHONY : queue/CMakeFiles/queue.dir/rule
+
+# Convenience name for target.
+queue: queue/CMakeFiles/queue.dir/rule
+.PHONY : queue
+
+# clean rule for target.
+queue/CMakeFiles/queue.dir/clean:
+	$(MAKE) $(MAKESILENT) -f queue/CMakeFiles/queue.dir/build.make queue/CMakeFiles/queue.dir/clean
+.PHONY : queue/CMakeFiles/queue.dir/clean
+
+#=============================================================================
 # Target rules for target main/CMakeFiles/main.dir
 
 # All Build rule for target.
-main/CMakeFiles/main.dir/all: arraylist/CMakeFiles/arraylist.dir/all
 main/CMakeFiles/main.dir/all: linkedlist/CMakeFiles/linkedlist.dir/all
+main/CMakeFiles/main.dir/all: queue/CMakeFiles/queue.dir/all
+main/CMakeFiles/main.dir/all: arraylist/CMakeFiles/arraylist.dir/all
 	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles --progress-num=5,6 "Built target main"
@@ -190,7 +236,7 @@ main/CMakeFiles/main.dir/all: linkedlist/CMakeFiles/linkedlist.dir/all
 
 # Build rule for subdir invocation for target.
 main/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles 0
 .PHONY : main/CMakeFiles/main.dir/rule

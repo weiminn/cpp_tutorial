@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles /Users/weiminn/Documents/cpp_tutorial/ds/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles /Users/weiminn/Documents/cpp_tutorial/ds/build/queue//CMakeFiles/progress.marks
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 queue/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 queue/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,70 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 queue/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 queue/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named arraylist
+# Convenience name for target.
+queue/CMakeFiles/queue.dir/rule:
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 queue/CMakeFiles/queue.dir/rule
+.PHONY : queue/CMakeFiles/queue.dir/rule
 
-# Build rule for target.
-arraylist: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 arraylist
-.PHONY : arraylist
-
-# fast build rule for target.
-arraylist/fast:
-	$(MAKE) $(MAKESILENT) -f arraylist/CMakeFiles/arraylist.dir/build.make arraylist/CMakeFiles/arraylist.dir/build
-.PHONY : arraylist/fast
-
-#=============================================================================
-# Target rules for targets named linkedlist
-
-# Build rule for target.
-linkedlist: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linkedlist
-.PHONY : linkedlist
-
-# fast build rule for target.
-linkedlist/fast:
-	$(MAKE) $(MAKESILENT) -f linkedlist/CMakeFiles/linkedlist.dir/build.make linkedlist/CMakeFiles/linkedlist.dir/build
-.PHONY : linkedlist/fast
-
-#=============================================================================
-# Target rules for targets named queue
-
-# Build rule for target.
-queue: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 queue
+# Convenience name for target.
+queue: queue/CMakeFiles/queue.dir/rule
 .PHONY : queue
 
 # fast build rule for target.
 queue/fast:
-	$(MAKE) $(MAKESILENT) -f queue/CMakeFiles/queue.dir/build.make queue/CMakeFiles/queue.dir/build
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f queue/CMakeFiles/queue.dir/build.make queue/CMakeFiles/queue.dir/build
 .PHONY : queue/fast
 
-#=============================================================================
-# Target rules for targets named main
+src/queue.o: src/queue.cpp.o
+.PHONY : src/queue.o
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# target to build an object file
+src/queue.cpp.o:
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f queue/CMakeFiles/queue.dir/build.make queue/CMakeFiles/queue.dir/src/queue.cpp.o
+.PHONY : src/queue.cpp.o
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/build
-.PHONY : main/fast
+src/queue.i: src/queue.cpp.i
+.PHONY : src/queue.i
+
+# target to preprocess a source file
+src/queue.cpp.i:
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f queue/CMakeFiles/queue.dir/build.make queue/CMakeFiles/queue.dir/src/queue.cpp.i
+.PHONY : src/queue.cpp.i
+
+src/queue.s: src/queue.cpp.s
+.PHONY : src/queue.s
+
+# target to generate assembly for a file
+src/queue.cpp.s:
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f queue/CMakeFiles/queue.dir/build.make queue/CMakeFiles/queue.dir/src/queue.cpp.s
+.PHONY : src/queue.cpp.s
 
 # Help Target
 help:
@@ -176,10 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... arraylist"
-	@echo "... linkedlist"
-	@echo "... main"
 	@echo "... queue"
+	@echo "... src/queue.o"
+	@echo "... src/queue.i"
+	@echo "... src/queue.s"
 .PHONY : help
 
 
@@ -191,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

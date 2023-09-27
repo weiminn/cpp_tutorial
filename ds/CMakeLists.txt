@@ -15,4 +15,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_subdirectory (arraylist)
 add_subdirectory (linkedlist)
+add_subdirectory (queue)
 add_subdirectory (main)

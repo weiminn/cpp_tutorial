@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.27.5/CMakeSystem.cmake"
   "/Users/weiminn/Documents/cpp_tutorial/ds/linkedlist/CMakeLists.txt"
   "/Users/weiminn/Documents/cpp_tutorial/ds/main/CMakeLists.txt"
+  "/Users/weiminn/Documents/cpp_tutorial/ds/queue/CMakeLists.txt"
   "/opt/homebrew/Cellar/cmake/3.27.5/share/cmake/Modules/CMakeCCompiler.cmake.in"
   "/opt/homebrew/Cellar/cmake/3.27.5/share/cmake/Modules/CMakeCCompilerABI.c"
   "/opt/homebrew/Cellar/cmake/3.27.5/share/cmake/Modules/CMakeCInformation.cmake"
@@ -127,6 +128,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "arraylist/CMakeFiles/CMakeDirectoryInformation.cmake"
   "linkedlist/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "queue/CMakeFiles/CMakeDirectoryInformation.cmake"
   "main/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -134,5 +136,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "arraylist/CMakeFiles/arraylist.dir/DependInfo.cmake"
   "linkedlist/CMakeFiles/linkedlist.dir/DependInfo.cmake"
+  "queue/CMakeFiles/queue.dir/DependInfo.cmake"
   "main/CMakeFiles/main.dir/DependInfo.cmake"
   )

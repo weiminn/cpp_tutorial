@@ -1,6 +1,7 @@
 #include <iostream>
 #include "arraylist.hpp"
 #include "linkedlist.hpp"
+#include "queue.hpp"
 
 int main(){
 
@@ -69,8 +70,20 @@ int main(){
     ll.printString();
     cout << ll.head << endl;
 
+    cout << "============================" << endl;
+    Queue<int> cm = Queue<int>();
+    cm.enqueue(30);
+    cm.enqueue(29);
+    cm.printString();
+    
+    cout << "Pecking order: " << *cm.dequeue() << ", and " << *cm.dequeue() << endl;
+    cm.printString();
+    // cout << "Tail: " << cm.tail->value << endl;
+    cout << "Recall " << endl;
+    cm.enqueue(5);
+    cm.printString();
 
-    // cout << ll->head->value << endl;
+    cout << "============================" << endl;
 
     return 0;
 }

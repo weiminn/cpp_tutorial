@@ -1,19 +1,20 @@
 cmake_minimum_required (VERSION 3.10)
-project (linkedlist)
+project (queue)
 
 # create library binary for source file
-add_library(linkedlist SHARED 
-    src/linkedlist.cpp
+add_library(queue SHARED 
+    src/queue.cpp
 )
 
 # register header files
-target_include_directories(linkedlist 
+target_include_directories(queue 
     # PRIVATE 
-    PUBLIC # propagate this down to targes that depends on this
+    PUBLIC # propagate this down to targets that depends on this
     ${CMAKE_CURRENT_SOURCE_DIR}/inc
 )
 
-target_link_libraries(linkedlist
+target_link_libraries(queue
     PRIVATE
     arraylist
+    linkedlist
 )
