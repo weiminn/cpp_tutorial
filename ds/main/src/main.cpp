@@ -78,9 +78,10 @@ int main(){
     
     cout << "Pecking order: " << *cm.dequeue() << ", and " << *cm.dequeue() << endl;
     cm.printString();
-    // cout << "Tail: " << cm.tail->value << endl;
     cout << "Recall " << endl;
     cm.enqueue(5);
+    // will give error cos no tail yet: cout << "Tail: " << cm.tail->value << endl;
+    // cm.enqueue(41);
     cm.printString();
 
     cout << "============================" << endl;

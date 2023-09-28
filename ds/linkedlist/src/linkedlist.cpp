@@ -43,29 +43,28 @@ void LinkedList<T>::add(T x){
     // Assign to head if size is 0 (empty)
     if (head == NULL) {
         head = newNode;
-        return;
     } 
     // Assign to tail if size is 1 (no tail)
     else if (tail == NULL){
         tail = newNode;
         head->next = newNode;
         tail->prev = head;
-        return;
-    }
+    } else {
   
-    // Naive, O(n^2): Traverse till end of list
-    // LinkedNode<T>* temp = head;
-    // while (temp->next != NULL) {
-    //     // Update temp
-    //     temp = temp->next;
-    // }
-    // // Insert at the last.
-    // temp->next = newNode;
+        // Naive, O(n^2): Traverse till end of list
+        // LinkedNode<T>* temp = head;
+        // while (temp->next != NULL) {
+        //     // Update temp
+        //     temp = temp->next;
+        // }
+        // // Insert at the last.
+        // temp->next = newNode;
 
-    // Efficient, O(n): Insert from tail
-    tail->next = newNode;
-    newNode->prev = tail;
-    tail = newNode;
+        // Efficient, O(n): Insert from tail
+        tail->next = newNode;
+        newNode->prev = tail;
+        tail = newNode;
+    }
 }
 
 template <typename T> 
@@ -101,6 +100,7 @@ int LinkedList<T>::getSize(){
 
 template <typename T> 
 void LinkedList<T>::remove(int n){
+    cout << "(Size: " << getSize() << ") ";
 
     // get nth node
     LinkedNode<T>* nthNode = get(n);
@@ -114,7 +114,6 @@ void LinkedList<T>::remove(int n){
         } else {
             head = NULL;
             tail = NULL;
-            size = 0;
         }
         
         delete nthNode;
@@ -123,20 +122,13 @@ void LinkedList<T>::remove(int n){
         // nthNode might be head == tail after dequeuing
         if (head != tail){
             nthNode->prev->next = NULL;
-        }
-
-        // if (head == tail && head == nthNode){
-        //     head = NULL;
-        //     tail = NULL;
-        //     size = 0;
-        // }
+        } // else case already handled by the preceding block
         
         tail = nthNode->prev;
         delete nthNode;
     } else {
         nthNode->prev->next = nthNode->next;
         nthNode->next->prev = nthNode->prev;
-        size--;
         delete nthNode;
     }
     size--;
@@ -180,6 +172,8 @@ LinkedNode<T>* LinkedList<T>::get(int n){
 template <typename T> 
 void LinkedList<T>::printString(){
 
+    cout << "(Size: " << getSize() << ") ";
+
     cout << "Forward Traversal: ";
     LinkedNode<T> *currNode = head;
     while(currNode != NULL){
@@ -190,6 +184,12 @@ void LinkedList<T>::printString(){
 
     cout << "Backward Traversal: ";
     currNode = tail;
+    
+    // you need to point to head if tail is null cos the head is still non-null
+    if (size > 0) {
+        currNode = head;
+    }
+
     while(currNode != NULL){
         cout << currNode->value << " ";
         currNode = currNode->prev;
