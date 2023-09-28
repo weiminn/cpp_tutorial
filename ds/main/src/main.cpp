@@ -2,6 +2,7 @@
 #include "arraylist.hpp"
 #include "linkedlist.hpp"
 #include "queue.hpp"
+#include "stack.hpp"
 
 int main(){
 
@@ -85,6 +86,20 @@ int main(){
     cm.printString();
 
     cout << "============================" << endl;
+    Stack<int> leaders = Stack<int>();
+    leaders.push(7);
+    leaders.push(10);
+    leaders.push(17);
+    leaders.printString();
+
+    cout << "Subbing out: " << *leaders.pop() << endl;
+    // cout << "Subbing out: " << *leaders.pop() << ", and " << *leaders.pop() << endl;
+    leaders.printString();
+
+    cout << "Glass ankles." << endl;
+    leaders.pop();
+    leaders.push(4);
+    leaders.printString();
 
     return 0;
 }

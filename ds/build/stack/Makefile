@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles /Users/weiminn/Documents/cpp_tutorial/ds/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles /Users/weiminn/Documents/cpp_tutorial/ds/build/stack//CMakeFiles/progress.marks
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/weiminn/Documents/cpp_tutorial/ds/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,83 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named arraylist
+# Convenience name for target.
+stack/CMakeFiles/stack.dir/rule:
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack/CMakeFiles/stack.dir/rule
+.PHONY : stack/CMakeFiles/stack.dir/rule
 
-# Build rule for target.
-arraylist: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 arraylist
-.PHONY : arraylist
-
-# fast build rule for target.
-arraylist/fast:
-	$(MAKE) $(MAKESILENT) -f arraylist/CMakeFiles/arraylist.dir/build.make arraylist/CMakeFiles/arraylist.dir/build
-.PHONY : arraylist/fast
-
-#=============================================================================
-# Target rules for targets named linkedlist
-
-# Build rule for target.
-linkedlist: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linkedlist
-.PHONY : linkedlist
-
-# fast build rule for target.
-linkedlist/fast:
-	$(MAKE) $(MAKESILENT) -f linkedlist/CMakeFiles/linkedlist.dir/build.make linkedlist/CMakeFiles/linkedlist.dir/build
-.PHONY : linkedlist/fast
-
-#=============================================================================
-# Target rules for targets named queue
-
-# Build rule for target.
-queue: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 queue
-.PHONY : queue
-
-# fast build rule for target.
-queue/fast:
-	$(MAKE) $(MAKESILENT) -f queue/CMakeFiles/queue.dir/build.make queue/CMakeFiles/queue.dir/build
-.PHONY : queue/fast
-
-#=============================================================================
-# Target rules for targets named stack
-
-# Build rule for target.
-stack: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack
+# Convenience name for target.
+stack: stack/CMakeFiles/stack.dir/rule
 .PHONY : stack
 
 # fast build rule for target.
 stack/fast:
-	$(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/build
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/build
 .PHONY : stack/fast
 
-#=============================================================================
-# Target rules for targets named main
+src/stack.o: src/stack.cpp.o
+.PHONY : src/stack.o
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# target to build an object file
+src/stack.cpp.o:
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/src/stack.cpp.o
+.PHONY : src/stack.cpp.o
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/build
-.PHONY : main/fast
+src/stack.i: src/stack.cpp.i
+.PHONY : src/stack.i
+
+# target to preprocess a source file
+src/stack.cpp.i:
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/src/stack.cpp.i
+.PHONY : src/stack.cpp.i
+
+src/stack.s: src/stack.cpp.s
+.PHONY : src/stack.s
+
+# target to generate assembly for a file
+src/stack.cpp.s:
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/src/stack.cpp.s
+.PHONY : src/stack.cpp.s
 
 # Help Target
 help:
@@ -189,11 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... arraylist"
-	@echo "... linkedlist"
-	@echo "... main"
-	@echo "... queue"
 	@echo "... stack"
+	@echo "... src/stack.o"
+	@echo "... src/stack.i"
+	@echo "... src/stack.s"
 .PHONY : help
 
 
@@ -205,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/weiminn/Documents/cpp_tutorial/ds/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -8,4 +8,5 @@ target_link_libraries(main
     arraylist
     linkedlist
     queue
+    stack
 )

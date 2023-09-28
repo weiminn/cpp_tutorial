@@ -100,7 +100,7 @@ int LinkedList<T>::getSize(){
 
 template <typename T> 
 void LinkedList<T>::remove(int n){
-    cout << "(Size: " << getSize() << ") ";
+    // cout << "(Size: " << getSize() << ") ";
 
     // get nth node
     LinkedNode<T>* nthNode = get(n);
@@ -172,7 +172,7 @@ LinkedNode<T>* LinkedList<T>::get(int n){
 template <typename T> 
 void LinkedList<T>::printString(){
 
-    cout << "(Size: " << getSize() << ") ";
+    // cout << "(Size: " << getSize() << ") ";
 
     cout << "Forward Traversal: ";
     LinkedNode<T> *currNode = head;
@@ -186,7 +186,7 @@ void LinkedList<T>::printString(){
     currNode = tail;
     
     // you need to point to head if tail is null cos the head is still non-null
-    if (size > 0) {
+    if (size == 1) {
         currNode = head;
     }
 
