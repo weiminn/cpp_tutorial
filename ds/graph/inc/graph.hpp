@@ -10,6 +10,7 @@ using namespace std;
 class Graph {
     private:
         ArrayList<Vertex*>* vertices;
+        // todo: create Edge class for weighted digraph
 
     public:
         Graph();
