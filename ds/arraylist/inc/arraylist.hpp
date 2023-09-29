@@ -10,6 +10,7 @@ class ArrayList {
         vector<T> data;
 
     public:
+        ArrayList();
         ArrayList(vector<T> input);
         int getSize();
         void add(T x);
@@ -19,7 +20,7 @@ class ArrayList {
         T get(int i);
         T set(int i, T x);
         ArrayList<T> subList(int i1, int i2);
-        // int indexOf(T)
+        int indexOf(T x);
         // void sort(Comparator)
         // void resize(int)
         // void shift(int i, int j)

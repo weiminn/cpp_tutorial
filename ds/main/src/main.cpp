@@ -3,6 +3,8 @@
 #include "linkedlist.hpp"
 #include "queue.hpp"
 #include "stack.hpp"
+#include "vertex.hpp"
+#include "graph.hpp"
 
 int main(){
 
@@ -100,6 +102,28 @@ int main(){
     leaders.pop();
     leaders.push(4);
     leaders.printString();
+
+    cout << "============================" << endl;
+    Graph nikoverse = Graph();
+    Vertex v1 = Vertex("Nikocado");
+    Vertex v2 = Vertex("Amberlynn");
+    Vertex v3 = Vertex("Oompaville");
+    Vertex v4 = Vertex("Papa Meat");
+    Vertex v5 = Vertex("Penguinz0");
+    nikoverse.addVertex(&v1);
+    nikoverse.addVertex(&v2);
+    nikoverse.addVertex(&v3);
+    nikoverse.addVertex(&v4);
+    nikoverse.addVertex(&v5);
+    nikoverse.addEdge(&v2, &v1);
+    nikoverse.addEdge(&v3, &v1);
+    nikoverse.addEdge(&v4, &v1);
+    nikoverse.addEdge(&v5, &v1);
+    nikoverse.addEdge(&v1, &v3);
+    nikoverse.addEdge(&v4, &v3);
+    nikoverse.addEdge(&v4, &v5);
+    nikoverse.addEdge(&v3, &v4);
+    nikoverse.printGraph();
 
     return 0;
 }

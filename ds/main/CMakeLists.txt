@@ -9,4 +9,5 @@ target_link_libraries(main
     linkedlist
     queue
     stack
+    graph
 )

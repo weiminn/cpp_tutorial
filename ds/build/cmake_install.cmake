@@ -43,6 +43,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/weiminn/Documents/cpp_tutorial/ds/build/linkedlist/cmake_install.cmake")
   include("/Users/weiminn/Documents/cpp_tutorial/ds/build/queue/cmake_install.cmake")
   include("/Users/weiminn/Documents/cpp_tutorial/ds/build/stack/cmake_install.cmake")
+  include("/Users/weiminn/Documents/cpp_tutorial/ds/build/graph/cmake_install.cmake")
   include("/Users/weiminn/Documents/cpp_tutorial/ds/build/main/cmake_install.cmake")
 
 endif()

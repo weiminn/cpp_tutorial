@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -Darraylist_EXPORTS
 
-CXX_INCLUDES = -I/Users/weiminn/Documents/cpp_tutorial/ds/arraylist/inc
+CXX_INCLUDES = -I/Users/weiminn/Documents/cpp_tutorial/ds/arraylist/inc -I/Users/weiminn/Documents/cpp_tutorial/ds/arraylist/../nodes
 
 CXX_FLAGSarm64 = -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC
 

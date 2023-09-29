@@ -169,6 +169,19 @@ stack/fast:
 .PHONY : stack/fast
 
 #=============================================================================
+# Target rules for targets named graph
+
+# Build rule for target.
+graph: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 graph
+.PHONY : graph
+
+# fast build rule for target.
+graph/fast:
+	$(MAKE) $(MAKESILENT) -f graph/CMakeFiles/graph.dir/build.make graph/CMakeFiles/graph.dir/build
+.PHONY : graph/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -190,6 +203,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... arraylist"
+	@echo "... graph"
 	@echo "... linkedlist"
 	@echo "... main"
 	@echo "... queue"

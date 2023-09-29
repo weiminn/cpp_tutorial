@@ -733,6 +733,8 @@ main/CMakeFiles/main.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Users/weiminn/Documents/cpp_tutorial/ds/arraylist/inc/arraylist.hpp \
   /Users/weiminn/Documents/cpp_tutorial/ds/linkedlist/inc/linkedlist.hpp \
-  /Users/weiminn/Documents/cpp_tutorial/ds/linkedlist/inc/linkednode.hpp \
+  /Users/weiminn/Documents/cpp_tutorial/ds/arraylist/../nodes/linkednode.hpp \
   /Users/weiminn/Documents/cpp_tutorial/ds/queue/inc/queue.hpp \
-  /Users/weiminn/Documents/cpp_tutorial/ds/stack/inc/stack.hpp
+  /Users/weiminn/Documents/cpp_tutorial/ds/stack/inc/stack.hpp \
+  /Users/weiminn/Documents/cpp_tutorial/ds/arraylist/../nodes/vertex.hpp \
+  /Users/weiminn/Documents/cpp_tutorial/ds/graph/inc/graph.hpp

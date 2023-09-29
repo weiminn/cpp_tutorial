@@ -94,6 +94,7 @@ bin/main: main/CMakeFiles/main.dir/src/main.cpp.o
 bin/main: main/CMakeFiles/main.dir/build.make
 bin/main: queue/libqueue.dylib
 bin/main: stack/libstack.dylib
+bin/main: graph/libgraph.dylib
 bin/main: linkedlist/liblinkedlist.dylib
 bin/main: arraylist/libarraylist.dylib
 bin/main: main/CMakeFiles/main.dir/link.txt

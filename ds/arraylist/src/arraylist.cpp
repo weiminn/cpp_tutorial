@@ -1,8 +1,14 @@
 #include <iostream>
 #include <vector>
 #include "arraylist.hpp"
+#include "vertex.hpp"
 
 using namespace std;
+
+template <typename T> 
+ArrayList<T>::ArrayList() {
+    ArrayList::data = {};
+}
 
 template <typename T> 
 ArrayList<T>::ArrayList(vector<T> vector) {
@@ -39,6 +45,18 @@ bool ArrayList<T>::isEmpty(){
 }
 
 template <typename T> 
+int ArrayList<T>::indexOf(T x) {
+
+    // by default, it directly checks the primitive values and memory references directly 
+    for (int i = 0; i < data.size(); i++){
+        if (x == data[i]){
+            return i;
+        }
+    }
+    return -1;
+}
+
+template <typename T> 
 T ArrayList<T>::get(int i){
     return ArrayList::data[i];
 }
@@ -72,3 +90,4 @@ void ArrayList<T>::printString(){
 template class ArrayList<int>;
 template class ArrayList<double>;
 template class ArrayList<string>;
+template class ArrayList<Vertex*>;
