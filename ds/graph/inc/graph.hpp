@@ -7,15 +7,16 @@
 using namespace std;
 
 // You need to wrap your object inside the LinkedNode before you add them to the LinkedList
+template <typename T, typename V>
 class Graph {
     private:
-        ArrayList<Vertex*>* vertices;
+        ArrayList<Vertex<T, V>*>* vertices;
         // todo: create Edge class for weighted digraph
 
     public:
         Graph();
-        void addVertex(Vertex* vertex);
-        void addEdge(Vertex* from, Vertex* to);
+        void addVertex(Vertex<T, V>* vertex);
+        void addEdge(Vertex<T, V>* from, Vertex<T, V>* to);
 
         // for now, we only remove via string label, 
         // so you need the labels to be unique

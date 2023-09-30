@@ -5,19 +5,23 @@
 
 using namespace std;
 
-Vertex::Vertex(string lbl){
+template <typename T, typename V>
+Vertex<T, V>::Vertex(T lbl, V val){
     label = lbl;
+    value = val;
     inEdges = new ArrayList<Vertex*>();
     outEdges = new ArrayList<Vertex*>();
 }
 
-void Vertex::addInEdge(Vertex* vertex){
+template <typename T, typename V>
+void Vertex<T, V>::addInEdge(Vertex* vertex){
     if (inEdges->indexOf(vertex) < 0){    
         inEdges->add(vertex);
     }
 }
 
-void Vertex::removeInEdge(string lbl){
+template <typename T, typename V>
+void Vertex<T, V>::removeInEdge(T lbl){
     for (int i = 0; i < inEdges->getSize(); i++){
         if (inEdges->get(i)->label == lbl){
             inEdges->remove(i);
@@ -25,16 +29,20 @@ void Vertex::removeInEdge(string lbl){
     }
 }
 
-void Vertex::addOutEdge(Vertex* vertex){
+template <typename T, typename V>
+void Vertex<T, V>::addOutEdge(Vertex* vertex){
     if (outEdges->indexOf(vertex) < 0){    
         outEdges->add(vertex);
     }
 }
 
-void Vertex::removeOutEdge(string lbl){
+template <typename T, typename V>
+void Vertex<T, V>::removeOutEdge(T lbl){
     for (int i = 0; i < outEdges->getSize(); i++){
         if (outEdges->get(i)->label == lbl){
             outEdges->remove(i);
         }
     }
 }
+
+template class Vertex<string, int>;

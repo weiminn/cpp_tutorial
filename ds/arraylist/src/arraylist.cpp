@@ -90,4 +90,4 @@ void ArrayList<T>::printString(){
 template class ArrayList<int>;
 template class ArrayList<double>;
 template class ArrayList<string>;
-template class ArrayList<Vertex*>;
+template class ArrayList<Vertex<string, int>*>;

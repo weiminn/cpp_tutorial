@@ -104,12 +104,12 @@ int main(){
     leaders.printString();
 
     cout << "============================" << endl;
-    Graph nikoverse = Graph();
-    Vertex v1 = Vertex("Nikocado");
-    Vertex v2 = Vertex("Amberlynn");
-    Vertex v3 = Vertex("Oompaville");
-    Vertex v4 = Vertex("Papa Meat");
-    Vertex v5 = Vertex("Penguinz0");
+    Graph<string,int> nikoverse = Graph<string, int>();
+    Vertex<string, int> v1 = Vertex<string, int>("Nikocado", 0);
+    Vertex<string, int> v2 = Vertex<string, int>("Amberlynn", 0);
+    Vertex<string, int> v3 = Vertex<string, int>("Oompaville", 0);
+    Vertex<string, int> v4 = Vertex<string, int>("Papa Meat", 0);
+    Vertex<string, int> v5 = Vertex<string, int>("Penguinz0", 0);
     nikoverse.addVertex(&v1);
     nikoverse.addVertex(&v2);
     nikoverse.addVertex(&v3);
@@ -125,5 +125,8 @@ int main(){
     nikoverse.addEdge(&v3, &v4);
     nikoverse.printGraph();
 
+    cout << "============================" << endl;
+
+    
     return 0;
 }

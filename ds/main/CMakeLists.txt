@@ -10,4 +10,5 @@ target_link_libraries(main
     queue
     stack
     graph
+    tree
 )
