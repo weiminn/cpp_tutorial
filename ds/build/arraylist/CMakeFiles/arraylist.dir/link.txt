@@ -1,1 +1,1 @@
-/usr/bin/g++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libarraylist.dylib -install_name @rpath/libarraylist.dylib CMakeFiles/arraylist.dir/src/arraylist.cpp.o 
+/usr/bin/g++ -fPIC   -shared -Wl,-soname,libarraylist.so -o libarraylist.so CMakeFiles/arraylist.dir/src/arraylist.cpp.o 

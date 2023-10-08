@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/arraylist.dir/src/arraylist.cpp.o"
-  "CMakeFiles/arraylist.dir/src/arraylist.cpp.o.d"
-  "libarraylist.dylib"
   "libarraylist.pdb"
+  "libarraylist.so"
 )
 
 # Per-language clean rules from dependency scanning.

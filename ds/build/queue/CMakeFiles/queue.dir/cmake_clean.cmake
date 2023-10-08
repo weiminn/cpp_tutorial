@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/queue.dir/src/queue.cpp.o"
-  "CMakeFiles/queue.dir/src/queue.cpp.o.d"
-  "libqueue.dylib"
   "libqueue.pdb"
+  "libqueue.so"
 )
 
 # Per-language clean rules from dependency scanning.

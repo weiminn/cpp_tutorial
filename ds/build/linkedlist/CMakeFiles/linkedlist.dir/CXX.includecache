@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../arraylist/inc/arraylist.hpp
+vector
+-
+
+../linkedlist/inc/linkedlist.hpp
+vector
+-
+iostream
+-
+arraylist.hpp
+../linkedlist/inc/arraylist.hpp
+linkednode.hpp
+../linkedlist/inc/linkednode.hpp
+
+../nodes/linkednode.hpp
+
+/home/weiminn/Documents/cpp_tutorial/ds/linkedlist/src/linkedlist.cpp
+iostream
+-
+vector
+-
+linkedlist.hpp
+/home/weiminn/Documents/cpp_tutorial/ds/linkedlist/src/linkedlist.hpp
+arraylist.hpp
+/home/weiminn/Documents/cpp_tutorial/ds/linkedlist/src/arraylist.hpp
+

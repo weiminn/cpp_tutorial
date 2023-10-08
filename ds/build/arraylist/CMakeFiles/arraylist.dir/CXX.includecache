@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../arraylist/inc/arraylist.hpp
+vector
+-
+
+../nodes/vertex.hpp
+arraylist.hpp
+../nodes/arraylist.hpp
+
+/home/weiminn/Documents/cpp_tutorial/ds/arraylist/src/arraylist.cpp
+iostream
+-
+vector
+-
+arraylist.hpp
+/home/weiminn/Documents/cpp_tutorial/ds/arraylist/src/arraylist.hpp
+vertex.hpp
+/home/weiminn/Documents/cpp_tutorial/ds/arraylist/src/vertex.hpp
+

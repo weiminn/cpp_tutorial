@@ -15,5 +15,5 @@ class Stack:
     public:
         Stack();
         void push(T x);
-        T* pop();
+        T pop();
 };

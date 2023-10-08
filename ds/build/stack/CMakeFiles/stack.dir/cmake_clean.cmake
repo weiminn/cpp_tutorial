@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/stack.dir/src/stack.cpp.o"
-  "CMakeFiles/stack.dir/src/stack.cpp.o.d"
-  "libstack.dylib"
   "libstack.pdb"
+  "libstack.so"
 )
 
 # Per-language clean rules from dependency scanning.

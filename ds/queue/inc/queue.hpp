@@ -15,5 +15,5 @@ class Queue:
     public:
         Queue();
         void enqueue(T x);
-        T* dequeue();
+        T dequeue();
 };

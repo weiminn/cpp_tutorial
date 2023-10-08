@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC   -shared -Wl,-soname,libtree.so -o libtree.so CMakeFiles/tree.dir/src/treenode.cpp.o CMakeFiles/tree.dir/src/tree.cpp.o  -Wl,-rpath,/home/weiminn/Documents/cpp_tutorial/ds/build/graph:/home/weiminn/Documents/cpp_tutorial/ds/build/arraylist ../graph/libgraph.so ../arraylist/libarraylist.so 

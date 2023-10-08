@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/graph.dir/src/graph.cpp.o"
-  "CMakeFiles/graph.dir/src/graph.cpp.o.d"
   "CMakeFiles/graph.dir/src/vertex.cpp.o"
-  "CMakeFiles/graph.dir/src/vertex.cpp.o.d"
-  "libgraph.dylib"
   "libgraph.pdb"
+  "libgraph.so"
 )
 
 # Per-language clean rules from dependency scanning.

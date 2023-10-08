@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../arraylist/inc/arraylist.hpp
+vector
+-
+
+../graph/inc/graph.hpp
+arraylist.hpp
+../graph/inc/arraylist.hpp
+vertex.hpp
+../graph/inc/vertex.hpp
+graph.hpp
+../graph/inc/graph.hpp
+
+../nodes/vertex.hpp
+arraylist.hpp
+../nodes/arraylist.hpp
+
+/home/weiminn/Documents/cpp_tutorial/ds/graph/src/graph.cpp
+iostream
+-
+vector
+-
+arraylist.hpp
+/home/weiminn/Documents/cpp_tutorial/ds/graph/src/arraylist.hpp
+vertex.hpp
+/home/weiminn/Documents/cpp_tutorial/ds/graph/src/vertex.hpp
+graph.hpp
+/home/weiminn/Documents/cpp_tutorial/ds/graph/src/graph.hpp
+
+/home/weiminn/Documents/cpp_tutorial/ds/graph/src/vertex.cpp
+iostream
+-
+vector
+-
+arraylist.hpp
+/home/weiminn/Documents/cpp_tutorial/ds/graph/src/arraylist.hpp
+vertex.hpp
+/home/weiminn/Documents/cpp_tutorial/ds/graph/src/vertex.hpp
+

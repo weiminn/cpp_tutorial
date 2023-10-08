@@ -8,6 +8,8 @@
 
 int main(){
 
+    cout << "============================" << endl;
+    cout << "ArrayList" << endl;
     vector<int> test = {420, 69};
     ArrayList<int> array(test);
     array.printString();
@@ -47,6 +49,7 @@ int main(){
     backline.printString();
 
     cout << "============================" << endl;
+    cout << "LinkedList" << endl;
 
     LinkedList<int> ll(backline);
     ll.printString();
@@ -74,12 +77,15 @@ int main(){
     cout << ll.head << endl;
 
     cout << "============================" << endl;
+    cout << "Queue" << endl;
     Queue<int> cm = Queue<int>();
     cm.enqueue(30);
     cm.enqueue(29);
     cm.printString();
     
-    cout << "Pecking order: " << *cm.dequeue() << ", and " << *cm.dequeue() << endl;
+    cout << "Pecking Order: ";
+    // ubuntu g++ compiler doesn't tolerate printing out dereferenced pointers, so just use values instead
+    cout << cm.dequeue() << ", and " << cm.dequeue() << endl;
     cm.printString();
     cout << "Recall " << endl;
     cm.enqueue(5);
@@ -88,13 +94,15 @@ int main(){
     cm.printString();
 
     cout << "============================" << endl;
+    cout << "Stack" << endl;
     Stack<int> leaders = Stack<int>();
     leaders.push(7);
     leaders.push(10);
     leaders.push(17);
     leaders.printString();
 
-    cout << "Subbing out: " << *leaders.pop() << endl;
+    // ubuntu g++ compiler doesn't tolerate printing out dereferenced pointers, so just use values instead
+    cout << "Subbing out: " << leaders.pop() << endl;
     // cout << "Subbing out: " << *leaders.pop() << ", and " << *leaders.pop() << endl;
     leaders.printString();
 
@@ -104,6 +112,7 @@ int main(){
     leaders.printString();
 
     cout << "============================" << endl;
+    cout << "Graph" << endl;
     Graph<string,int> nikoverse = Graph<string, int>();
     Vertex<string, int> v1 = Vertex<string, int>("Nikocado", 0);
     Vertex<string, int> v2 = Vertex<string, int>("Amberlynn", 0);

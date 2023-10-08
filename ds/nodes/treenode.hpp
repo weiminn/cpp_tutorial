@@ -5,8 +5,8 @@
 using namespace std;
 
 template <typename T, typename V>
-class TreeNode: 
-public Vertex<T, V> {
+class TreeNode: public Vertex<T, V> 
+{
     private:
 
     public:
