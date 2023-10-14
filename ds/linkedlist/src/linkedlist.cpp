@@ -172,7 +172,7 @@ LinkedNode<T>* LinkedList<T>::get(int n){
 template <typename T> 
 void LinkedList<T>::printString(){
 
-    // cout << "Size: " << getSize() << endl;
+    cout << "Size: " << getSize() << endl;
 
     cout << "Forward Traversal: ";
     LinkedNode<T> *currNode = head;
